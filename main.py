@@ -53,3 +53,34 @@ elif level == "advanced":
 
 else:
     print("Please enter Beginner, Intermediate, or Advanced.")
+
+
+    
+# Placement Readiness Score
+
+print("\n========== PLACEMENT READINESS TEST ==========")
+
+python_score = int(input("Enter Python score (out of 30): "))
+sql_score = int(input("Enter SQL score (out of 25): "))
+aptitude_score = int(input("Enter Aptitude score (out of 25): "))
+communication_score = int(input("Enter Communication score (out of 20): "))
+
+total_score = (
+    python_score
+    + sql_score
+    + aptitude_score
+    + communication_score
+)
+
+print("\n========== YOUR PLACEMENT REPORT ==========")
+print("Student Name:", name)
+print("Total Score:", total_score, "/ 100")
+
+if total_score >= 80:
+    print("Status: Excellent Preparation")
+elif total_score >= 60:
+    print("Status: Good Preparation")
+elif total_score >= 40:
+    print("Status: Average Preparation")
+else:
+    print("Status: Needs Improvement")
